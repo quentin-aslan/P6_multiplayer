@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oc P6 multiplayer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="beforeGame">
+            <div class="jumbotron">
+              <h1 class="display-4">Jeu de plateau tour par tour en JS</h1>
+              <p class="lead"></p>
+              <hr class="my-4">
+              <p>2 joueurs évoluent chacun leur tour pour s'affronter ! Il ne peut en rester qu'un !</p>
+              <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Règles du jeu [MODAL A FAIRE]</a> -->
+                <hr>
+                <div id="formPseudo">
+                    <div class="alert alert-primary shadow text-center col-lg-12">
+                        <form>
+                            <h2>Pseudo</h2>
+                            <div class="form-group">
+                                <input id="pseudo" type="text" class="form-control" placeholder="Harry Potter">
+                            </div>
+                            <p class="text-danger errorPseudo">Votre pseudo doit contenir au moins 3 lettres</p>
+                            <button id="submitPseudo" type="submit" class="btn btn-success btn-lg">Suivant</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="waitPlayer">
+                    <div class="alert alert-danger shadow text-center col-lg-12">
+                            <h2>En attente d'un autre joueur ...</h2>
+                            <h3> <a href="http://admin.quentin-aslan:4005">Partage ce lien : <small>http://admin.quentin-aslan:4005</small></a> </h3>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Modal, règle du jeu -->
+        </div>
+    
+    
+        <div id="game">
+    
+            <h1 id="notif"></h1>
+    
+            <div id="content">
+            </div>
+    
+            <div id="info">
+                <h2 id="playerName"></h2>
+                <img id="avatar" />
+    
+                <h3 id="#lifeDiv"> Vie : <span id="life"></span></h3>
+    
+                <div id="weaponDiv">
+                    <h3>Arme : <span id="weapon"></span></h3>
+                    <h4>Dégats : <span id="damage"></span></h4>
+                </div>
+    
+                <div id="fight">
+                    <button id="attack">Attaquer</button>
+                    <button id="shield">Bouclier</button>
+                </div>
+            </div>
+    
+        </div>
+
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/IHM.js"></script>
+    <script src="js/Boot.js"></script>
+</body>
+
+</html>

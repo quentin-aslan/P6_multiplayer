@@ -1,0 +1,20 @@
+{
+  "name": "p6_multiplayer",
+  "version": "1.0.0",
+  "description": "Projet 6 - Jeu tour par tour en JS, amélioration : Multiplayer",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Quentin Aslan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.2",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
